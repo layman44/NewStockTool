@@ -1,0 +1,4 @@
+F:\yc\projects\C#\Stock\StockTool\Tool.Common\bin\Debug\Tool.Common.dll
+F:\yc\projects\C#\Stock\StockTool\Tool.Common\bin\Debug\Tool.Common.pdb
+F:\yc\projects\C#\Stock\StockTool\Tool.Common\obj\Debug\Tool.Common.dll
+F:\yc\projects\C#\Stock\StockTool\Tool.Common\obj\Debug\Tool.Common.pdb

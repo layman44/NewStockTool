@@ -1,0 +1,4 @@
+F:\yc\projects\C#\stock\StockTool\Tool.GetliftedShare\bin\Debug\Tool.GetliftedShare.dll
+F:\yc\projects\C#\stock\StockTool\Tool.GetliftedShare\bin\Debug\Tool.GetliftedShare.pdb
+F:\yc\projects\C#\stock\StockTool\Tool.GetliftedShare\obj\Debug\Tool.GetliftedShare.dll
+F:\yc\projects\C#\stock\StockTool\Tool.GetliftedShare\obj\Debug\Tool.GetliftedShare.pdb

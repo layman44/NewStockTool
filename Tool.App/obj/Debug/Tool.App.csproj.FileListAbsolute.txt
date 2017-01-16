@@ -1,0 +1,16 @@
+F:\yc\projects\C#\stock\StockTool\Tool.App\bin\Debug\Tool.App.exe.config
+F:\yc\projects\C#\stock\StockTool\Tool.App\bin\Debug\Tool.App.exe
+F:\yc\projects\C#\stock\StockTool\Tool.App\bin\Debug\Tool.App.pdb
+F:\yc\projects\C#\stock\StockTool\Tool.App\obj\Debug\Tool.App.csprojResolveAssemblyReference.cache
+F:\yc\projects\C#\stock\StockTool\Tool.App\obj\Debug\Tool.App.Properties.Resources.resources
+F:\yc\projects\C#\stock\StockTool\Tool.App\obj\Debug\Tool.App.csproj.GenerateResource.Cache
+F:\yc\projects\C#\stock\StockTool\Tool.App\obj\Debug\Tool.App.exe
+F:\yc\projects\C#\stock\StockTool\Tool.App\obj\Debug\Tool.App.pdb
+F:\yc\projects\C#\stock\StockTool\Tool.App\obj\Debug\Tool.App.Main.resources
+F:\yc\projects\C#\stock\StockTool\Tool.App\obj\Debug\Tool.App.temp.resources
+F:\yc\projects\C#\Stock\StockTool\Tool.App\obj\Debug\Tool.App.frmGetStock.resources
+F:\yc\projects\C#\Stock\StockTool\Tool.App\obj\Debug\Tool.App.StockBase.ucGetStockInfo.resources
+F:\yc\projects\C#\Stock\StockTool\Tool.App\bin\Debug\Tool.Common.dll
+F:\yc\projects\C#\Stock\StockTool\Tool.App\bin\Debug\Tool.Common.pdb
+F:\yc\projects\C#\Stock\StockTool\Tool.App\bin\Debug\Tool.GetStock.dll
+F:\yc\projects\C#\Stock\StockTool\Tool.App\bin\Debug\Tool.GetStock.pdb

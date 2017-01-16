@@ -1,0 +1,5 @@
+F:\yc\projects\C#\stock\StockTool\Tool.GetDailyData\bin\Debug\Tool.GetDailyData.dll
+F:\yc\projects\C#\stock\StockTool\Tool.GetDailyData\bin\Debug\Tool.GetDailyData.pdb
+F:\yc\projects\C#\stock\StockTool\Tool.GetDailyData\obj\Debug\Tool.GetDailyData.csprojResolveAssemblyReference.cache
+F:\yc\projects\C#\stock\StockTool\Tool.GetDailyData\obj\Debug\Tool.GetDailyData.dll
+F:\yc\projects\C#\stock\StockTool\Tool.GetDailyData\obj\Debug\Tool.GetDailyData.pdb

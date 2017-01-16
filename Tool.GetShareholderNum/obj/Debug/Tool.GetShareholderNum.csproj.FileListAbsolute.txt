@@ -1,0 +1,5 @@
+F:\yc\projects\C#\stock\StockTool\Tool.GetShareholderNum\bin\Debug\Tool.GetShareholderNum.dll
+F:\yc\projects\C#\stock\StockTool\Tool.GetShareholderNum\bin\Debug\Tool.GetShareholderNum.pdb
+F:\yc\projects\C#\stock\StockTool\Tool.GetShareholderNum\obj\Debug\Tool.GetShareholderNum.csprojResolveAssemblyReference.cache
+F:\yc\projects\C#\stock\StockTool\Tool.GetShareholderNum\obj\Debug\Tool.GetShareholderNum.dll
+F:\yc\projects\C#\stock\StockTool\Tool.GetShareholderNum\obj\Debug\Tool.GetShareholderNum.pdb
