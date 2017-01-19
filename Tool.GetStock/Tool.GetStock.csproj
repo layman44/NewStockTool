@@ -41,7 +41,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="GetStockBaseInfoFormUrl.cs" />
+    <Compile Include="GetStockFactory.cs" />
+    <Compile Include="IGetStock.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Tool.Common\Tool.Common.csproj">
+      <Project>{55224C8D-3B0B-42E3-AA8D-69341C8B1F10}</Project>
+      <Name>Tool.Common</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

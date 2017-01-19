@@ -3,3 +3,5 @@ F:\yc\projects\C#\stock\StockTool\Tool.GetStock\bin\Debug\Tool.GetStock.pdb
 F:\yc\projects\C#\stock\StockTool\Tool.GetStock\obj\Debug\Tool.GetStock.csprojResolveAssemblyReference.cache
 F:\yc\projects\C#\stock\StockTool\Tool.GetStock\obj\Debug\Tool.GetStock.dll
 F:\yc\projects\C#\stock\StockTool\Tool.GetStock\obj\Debug\Tool.GetStock.pdb
+F:\yc\projects\C#\Stock\StockTool\Tool.GetStock\bin\Debug\Tool.Common.dll
+F:\yc\projects\C#\Stock\StockTool\Tool.GetStock\bin\Debug\Tool.Common.pdb

@@ -10,6 +10,6 @@ namespace Tool.Common
     {
         public const string SH_ALL_URL = "http://query.sse.com.cn/security/stock/downloadStockListFile.do?csrcCode=&stockCode=&areaName=&stockType=1";
         public const string SZ_ALL_URL = "http://www.szse.cn/szseWeb/ShowReport.szse?SHOWTYPE=xlsx&CATALOGID=1110&tab1PAGENUM=1&ENCODE=1&TABKEY=tab1";
-        public const string SHAREHOLDER_NUM_URL = "http://quote.cfi.cn/gdhs/1/000001.html";//股东人数.
+        public const string SHAREHOLDER_NUM_URL = "https://xueqiu.com/stock/f10/shareholdernum.json?symbol=SZ000993&page=1&size=1000";//股东人数.
     }
 }

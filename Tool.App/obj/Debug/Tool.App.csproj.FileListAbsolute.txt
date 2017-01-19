@@ -14,3 +14,8 @@ F:\yc\projects\C#\Stock\StockTool\Tool.App\bin\Debug\Tool.Common.dll
 F:\yc\projects\C#\Stock\StockTool\Tool.App\bin\Debug\Tool.Common.pdb
 F:\yc\projects\C#\Stock\StockTool\Tool.App\bin\Debug\Tool.GetStock.dll
 F:\yc\projects\C#\Stock\StockTool\Tool.App\bin\Debug\Tool.GetStock.pdb
+F:\yc\projects\C#\Stock\StockTool\Tool.App\bin\Debug\EntityFramework.dll
+F:\yc\projects\C#\Stock\StockTool\Tool.App\bin\Debug\EntityFramework.SqlServer.dll
+F:\yc\projects\C#\Stock\StockTool\Tool.App\bin\Debug\EntityFramework.xml
+F:\yc\projects\C#\Stock\StockTool\Tool.App\bin\Debug\EntityFramework.SqlServer.xml
+F:\yc\projects\C#\Stock\StockTool\Tool.App\bin\Debug\zh-Hans\EntityFramework.resources.dll

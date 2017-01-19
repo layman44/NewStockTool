@@ -30,7 +30,13 @@ namespace Tool.App.StockBase
 
         private void btnStart_Click(object sender, EventArgs e)
         {
-
+            DataSet result = Tool.GetStock.GetStockFactory.GetStock(currentType);
+            if (result == null || result.Tables.Count == 0)
+            {
+                MessageBox.Show("数据获取异常");
+                return;
+            }
+            dgvStock.DataSource = result.Tables[0];
         }
     }
 }
