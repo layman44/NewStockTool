@@ -3,3 +3,9 @@ F:\yc\projects\C#\Stock\StockTool\Tool.Common\bin\Debug\Tool.Common.pdb
 F:\yc\projects\C#\Stock\StockTool\Tool.Common\obj\Debug\Tool.Common.dll
 F:\yc\projects\C#\Stock\StockTool\Tool.Common\obj\Debug\Tool.Common.pdb
 F:\yc\projects\C#\Stock\StockTool\Tool.Common\obj\Debug\Tool.Common.csprojResolveAssemblyReference.cache
+F:\yc\projects\C#\Stock\StockTool\Tool.Common\bin\Debug\NPOI.dll
+F:\yc\projects\C#\Stock\StockTool\Tool.Common\bin\Debug\NPOI.OOXML.dll
+F:\yc\projects\C#\Stock\StockTool\Tool.Common\bin\Debug\NPOI.OpenXml4Net.dll
+F:\yc\projects\C#\Stock\StockTool\Tool.Common\bin\Debug\ICSharpCode.SharpZipLib.dll
+F:\yc\projects\C#\Stock\StockTool\Tool.Common\bin\Debug\NPOI.OpenXmlFormats.dll
+F:\yc\projects\C#\Stock\StockTool\Tool.Common\bin\Debug\NPOI.xml

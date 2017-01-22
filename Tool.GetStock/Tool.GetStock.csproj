@@ -40,8 +40,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GetSHStock.cs" />
     <Compile Include="GetStockBaseInfoFormUrl.cs" />
     <Compile Include="GetStockFactory.cs" />
+    <Compile Include="GetSZStock.cs" />
     <Compile Include="IGetStock.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

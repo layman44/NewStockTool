@@ -14,6 +14,10 @@ namespace Tool.App.StockBase
     public partial class ucGetStockInfo : UserControl
     {
         private Enums.StockType currentType = Enums.StockType.SH;
+        public Enums.StockType CurrentType
+        {
+            get; private set;
+        }
         public ucGetStockInfo(Enums.StockType stype)
         {
             InitializeComponent();
@@ -30,13 +34,13 @@ namespace Tool.App.StockBase
 
         private void btnStart_Click(object sender, EventArgs e)
         {
-            DataSet result = Tool.GetStock.GetStockFactory.GetStock(currentType);
-            if (result == null || result.Tables.Count == 0)
+            DataTable result = Tool.GetStock.GetStockFactory.GetStock(currentType);
+            if (result == null)
             {
                 MessageBox.Show("数据获取异常");
                 return;
             }
-            dgvStock.DataSource = result.Tables[0];
+            dgvStock.DataSource = result;
         }
     }
 }

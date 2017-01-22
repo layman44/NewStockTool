@@ -10,6 +10,6 @@ namespace Tool.GetStock
 {
     interface IGetStock
     {
-        DataSet GetStock(Enums.StockType stype);
+        DataTable GetStock(Enums.StockType stype);
     }
 }

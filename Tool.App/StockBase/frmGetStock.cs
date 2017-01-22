@@ -30,17 +30,44 @@ namespace Tool.App
 
         private void tsbSH_Click(object sender, EventArgs e)
         {
-            ucGetStockInfo uc = new ucGetStockInfo(Enums.StockType.SH);
-            uc.Dock = DockStyle.Fill;
-            panelContainer.Controls.Add(uc);
+            bool isCreated = false;
+            foreach (Control control in panelContainer.Controls)
+            {
+                if (control.GetType() == typeof(ucGetStockInfo) && (control as ucGetStockInfo).CurrentType == Enums.StockType.SH)
+                {
+                    isCreated = true;
+                    control.Show();
+                    control.BringToFront();
+                    break;
+                }
+            }
+            if (!isCreated)
+            {
+                ucGetStockInfo uc = new ucGetStockInfo(Enums.StockType.SH);
+                uc.Dock = DockStyle.Fill;
+                panelContainer.Controls.Add(uc);
+            }
         }
 
         private void tsbSZ_Click(object sender, EventArgs e)
         {
-            ucGetStockInfo uc = new ucGetStockInfo(Enums.StockType.SZ);
-            uc.Dock = DockStyle.Fill;
-            panelContainer.Controls.Clear();
-            panelContainer.Controls.Add(uc);
+            bool isCreated = false;
+            foreach (Control control in panelContainer.Controls)
+            {
+                if (control.GetType() == typeof(ucGetStockInfo) && (control as ucGetStockInfo).CurrentType == Enums.StockType.SZ)
+                {
+                    isCreated = true;
+                    control.Show();
+                    control.BringToFront();
+                    break;
+                }
+            }
+            if (!isCreated)
+            {
+                ucGetStockInfo uc = new ucGetStockInfo(Enums.StockType.SZ);
+                uc.Dock = DockStyle.Fill;
+                panelContainer.Controls.Add(uc);
+            }
         }
     }
 }

@@ -72,89 +72,36 @@ namespace Tool.GetStock
             }
         }
 
-        public DataSet ExcelToDS(string path)
+
+        public DataTable GetStock(Enums.StockType stype)
         {
-            string[] sheetNames = GetExcelSheetNames(path);
-            if (null == sheetNames || sheetNames.Length == 0) return null;
-
-            string strConn = "Provider=Microsoft.Jet.OLEDB.4.0;" + "Data Source=" + path + ";" + "Extended Properties=Excel 8.0;";
-            OleDbConnection conn = new OleDbConnection(strConn);
-            conn.Open();
-            string strExcel = "";
-            OleDbDataAdapter myCommand = null;
-            DataSet ds = null;
-            strExcel = string.Format("select * from {0}", sheetNames[0]);
-            myCommand = new OleDbDataAdapter(strExcel, strConn);
-            ds = new DataSet();
-            myCommand.Fill(ds, "stocks");
-            return ds;
-        }
-
-        private String[] GetExcelSheetNames(string excelFile)
-        {
-            OleDbConnection objConn = null;
-            System.Data.DataTable dt = null;
-
-            try
+            string downFilePath = "";
+            if (stype == Enums.StockType.SH)
             {
-                // Connection String. Change the excel file to the file you
-                // will search.
-                string connString = string.Format("Provider=Microsoft.ACE.OLEDB.12.0;Data Source={0};Extended Properties='Excel 12.0;HDR=Yes;IMEX=1;'", excelFile);
-                // Create connection object by using the preceding connection string.
-                objConn = new OleDbConnection(connString);
-                // Open connection with the database.
-                objConn.Open();
-                // Get the data table containg the schema guid.
-                dt = objConn.GetOleDbSchemaTable(OleDbSchemaGuid.Tables, null);
-
-                if (dt == null)
+                downFilePath = Path.Combine(Tool.Common.Common.BASE_PATH, "tmp", "SH", "stockinfo.txt");
+                DownloadFile(stype, downFilePath);
+                if (File.Exists(downFilePath))
                 {
-                    return null;
+                    DataTable result = new GetSHStock().GetStock(downFilePath, true);
+                    return result;
                 }
-
-                String[] excelSheets = new String[dt.Rows.Count];
-                int i = 0;
-
-                // Add the sheet name to the string array.
-                foreach (DataRow row in dt.Rows)
-                {
-                    excelSheets[i] = row["TABLE_NAME"].ToString();
-                    i++;
-                }
-
-                // Loop through all of the sheets if you want too...
-                for (int j = 0; j < excelSheets.Length; j++)
-                {
-                    // Query each excel sheet.
-                }
-
-                return excelSheets;
-            }
-            catch (Exception ex)
-            {
                 return null;
-            }
-            finally
-            {
-                // Clean up.
-                if (objConn != null)
-                {
-                    objConn.Close();
-                    objConn.Dispose();
-                }
-                if (dt != null)
-                {
-                    dt.Dispose();
-                }
-            }
-        }
 
-        public DataSet GetStock(Enums.StockType stype)
-        {
-            string downFilePath = Path.Combine(Tool.Common.Common.BASE_PATH, "tmp", "stockinfo.xlsx");
-            DownloadFile(stype, downFilePath);
-            DataSet result = ExcelToDS(downFilePath);
-            return result;
+            }
+            else
+            {
+                downFilePath = Path.Combine(Tool.Common.Common.BASE_PATH, "tmp", "SZ", "stockinfo.xlsx");
+                DownloadFile(stype, downFilePath);
+                string[] sheetNames = ExcelHelper.GetSheetNames(downFilePath);
+                if (sheetNames.Length > 0)
+                {
+                    DataTable result = ExcelHelper.ExcelToDataTable(downFilePath, sheetNames[0], true);
+                    return result;
+                }
+            }
+
+            return null;
+
         }
     }
 }

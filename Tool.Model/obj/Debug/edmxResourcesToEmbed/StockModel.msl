@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="StockModelStoreContainer" CdmEntityContainer="StockEntities">
+    <EntitySetMapping Name="Base_Stock">
+      <EntityTypeMapping TypeName="IsTypeOf(StockModel.Base_Stock)">
+        <MappingFragment StoreEntitySet="Base_Stock">
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="DateOfIPO" ColumnName="DateOfIPO" />
+          <ScalarProperty Name="FK_IndustryId" ColumnName="FK_IndustryId" />
+          <ScalarProperty Name="FK_AreaId" ColumnName="FK_AreaId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Detail_Stock">
+      <EntityTypeMapping TypeName="IsTypeOf(StockModel.Detail_Stock)">
+        <MappingFragment StoreEntitySet="Detail_Stock">
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="ZSZ" ColumnName="ZSZ" />
+          <ScalarProperty Name="LTSZ" ColumnName="LTSZ" />
+          <ScalarProperty Name="ZGB" ColumnName="ZGB" />
+          <ScalarProperty Name="LTGB" ColumnName="LTGB" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

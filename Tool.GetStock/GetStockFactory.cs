@@ -10,7 +10,7 @@ namespace Tool.GetStock
 {
     public class GetStockFactory
     {
-        public static DataSet GetStock(Enums.StockType stype)
+        public static DataTable GetStock(Enums.StockType stype)
         {
             IGetStock stock = new GetStockBaseInfoFormUrl();
             return stock.GetStock(stype);

@@ -2,3 +2,4 @@ F:\yc\projects\C#\stock\StockTool\Tool.GetliftedShare\bin\Debug\Tool.GetliftedSh
 F:\yc\projects\C#\stock\StockTool\Tool.GetliftedShare\bin\Debug\Tool.GetliftedShare.pdb
 F:\yc\projects\C#\stock\StockTool\Tool.GetliftedShare\obj\Debug\Tool.GetliftedShare.dll
 F:\yc\projects\C#\stock\StockTool\Tool.GetliftedShare\obj\Debug\Tool.GetliftedShare.pdb
+F:\yc\projects\C#\Stock\StockTool\Tool.GetliftedShare\obj\Debug\Tool.GetliftedShare.csprojResolveAssemblyReference.cache

@@ -1,0 +1,13 @@
+F:\yc\projects\C#\Stock\StockTool\Tool.Model\bin\Debug\Tool.Model.dll.config
+F:\yc\projects\C#\Stock\StockTool\Tool.Model\bin\Debug\Tool.Model.dll
+F:\yc\projects\C#\Stock\StockTool\Tool.Model\bin\Debug\Tool.Model.pdb
+F:\yc\projects\C#\Stock\StockTool\Tool.Model\bin\Debug\EntityFramework.dll
+F:\yc\projects\C#\Stock\StockTool\Tool.Model\bin\Debug\EntityFramework.SqlServer.dll
+F:\yc\projects\C#\Stock\StockTool\Tool.Model\bin\Debug\MySql.Data.dll
+F:\yc\projects\C#\Stock\StockTool\Tool.Model\bin\Debug\MySql.Data.Entity.EF6.dll
+F:\yc\projects\C#\Stock\StockTool\Tool.Model\bin\Debug\EntityFramework.xml
+F:\yc\projects\C#\Stock\StockTool\Tool.Model\bin\Debug\EntityFramework.SqlServer.xml
+F:\yc\projects\C#\Stock\StockTool\Tool.Model\bin\Debug\zh-Hans\EntityFramework.resources.dll
+F:\yc\projects\C#\Stock\StockTool\Tool.Model\obj\Debug\Tool.Model.csprojResolveAssemblyReference.cache
+F:\yc\projects\C#\Stock\StockTool\Tool.Model\obj\Debug\Tool.Model.dll
+F:\yc\projects\C#\Stock\StockTool\Tool.Model\obj\Debug\Tool.Model.pdb

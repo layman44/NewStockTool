@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="StockModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="StockEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Base_Stock" EntityType="StockModel.Base_Stock" />
+    <EntitySet Name="Detail_Stock" EntityType="StockModel.Detail_Stock" />
+  </EntityContainer>
+  <EntityType Name="Base_Stock">
+    <Key>
+      <PropertyRef Name="Code" />
+    </Key>
+    <Property Name="Code" Type="String" Nullable="false" annotation:StoreGeneratedPattern="None" MaxLength="6" FixedLength="true" />
+    <Property Name="Name" Type="String" Nullable="false" />
+    <Property Name="DateOfIPO" Type="DateTime" Nullable="false" />
+    <Property Name="FK_IndustryId" Type="Int32">
+      <Documentation>
+        <Summary>所属行业外键</Summary>
+        <LongDescription>所属行业外键</LongDescription>
+      </Documentation>
+    </Property>
+    <Property Name="FK_AreaId" Type="Int32">
+      <Documentation>
+        <Summary>所在地区外键</Summary>
+        <LongDescription>所在地区外键</LongDescription>
+      </Documentation>
+    </Property>
+  </EntityType>
+  <EntityType Name="Detail_Stock">
+    <Key>
+      <PropertyRef Name="Code" />
+    </Key>
+    <Property Name="Code" Type="String" Nullable="false" annotation:StoreGeneratedPattern="None" FixedLength="true" MaxLength="6" />
+    <Property Name="ZSZ" Type="Decimal" Nullable="false">
+      <Documentation>
+        <Summary>总市值</Summary>
+        <LongDescription>总市值</LongDescription>
+      </Documentation>
+    </Property>
+    <Property Name="LTSZ" Type="Decimal" Nullable="false">
+      <Documentation>
+        <Summary>流通市值</Summary>
+        <LongDescription>流通市值</LongDescription>
+      </Documentation>
+    </Property>
+    <Property Name="ZGB" Type="Decimal" Nullable="false">
+      <Documentation>
+        <Summary>总股本</Summary>
+        <LongDescription>总股本</LongDescription>
+      </Documentation>
+    </Property>
+    <Property Name="LTGB" Type="Decimal" Nullable="false">
+      <Documentation>
+        <Summary>流通股本</Summary>
+        <LongDescription>流通股本</LongDescription>
+      </Documentation>
+    </Property>
+  </EntityType>
+</Schema>
