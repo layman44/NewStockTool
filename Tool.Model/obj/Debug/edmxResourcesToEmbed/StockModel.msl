@@ -4,6 +4,7 @@
     <EntitySetMapping Name="Base_Stock">
       <EntityTypeMapping TypeName="IsTypeOf(StockModel.Base_Stock)">
         <MappingFragment StoreEntitySet="Base_Stock">
+          <ScalarProperty Name="StockType" ColumnName="StockType" />
           <ScalarProperty Name="Code" ColumnName="Code" />
           <ScalarProperty Name="Name" ColumnName="Name" />
           <ScalarProperty Name="DateOfIPO" ColumnName="DateOfIPO" />

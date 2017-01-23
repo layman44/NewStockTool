@@ -11,3 +11,11 @@ F:\yc\projects\C#\Stock\StockTool\Tool.GetStock\bin\Debug\ICSharpCode.SharpZipLi
 F:\yc\projects\C#\Stock\StockTool\Tool.GetStock\bin\Debug\NPOI.OpenXmlFormats.dll
 F:\yc\projects\C#\Stock\StockTool\Tool.GetStock\bin\Debug\NPOI.OpenXml4Net.dll
 F:\yc\projects\C#\Stock\StockTool\Tool.GetStock\bin\Debug\NPOI.xml
+F:\yc\projects\C#\Stock\StockTool\Tool.GetStock\bin\Debug\ChnCharInfo.dll
+F:\yc\projects\C#\Stock\StockTool\Tool.GetStock\bin\Debug\ChnCharInfo.xml
+F:\yc\projects\C#\Stock\StockTool\Tool.GetStock\bin\Debug\zh-CN\ChnCharInfo.resources.dll
+F:\yc\projects\C#\Stock\StockTool\Tool.GetStock\bin\Debug\Tool.Model.dll
+F:\yc\projects\C#\Stock\StockTool\Tool.GetStock\bin\Debug\EntityFramework.dll
+F:\yc\projects\C#\Stock\StockTool\Tool.GetStock\bin\Debug\Tool.Model.pdb
+F:\yc\projects\C#\Stock\StockTool\Tool.GetStock\bin\Debug\EntityFramework.xml
+F:\yc\projects\C#\Stock\StockTool\Tool.GetStock\bin\Debug\zh-Hans\EntityFramework.resources.dll

@@ -19,5 +19,6 @@ namespace Tool.Model
         public System.DateTime DateOfIPO { get; set; }
         public Nullable<int> FK_IndustryId { get; set; }
         public Nullable<int> FK_AreaId { get; set; }
+        public Nullable<int> StockType { get; set; }
     }
 }

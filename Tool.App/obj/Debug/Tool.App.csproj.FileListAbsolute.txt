@@ -25,3 +25,8 @@ F:\yc\projects\C#\Stock\StockTool\Tool.App\bin\Debug\ICSharpCode.SharpZipLib.dll
 F:\yc\projects\C#\Stock\StockTool\Tool.App\bin\Debug\NPOI.OpenXmlFormats.dll
 F:\yc\projects\C#\Stock\StockTool\Tool.App\bin\Debug\NPOI.OpenXml4Net.dll
 F:\yc\projects\C#\Stock\StockTool\Tool.App\bin\Debug\NPOI.xml
+F:\yc\projects\C#\Stock\StockTool\Tool.App\bin\Debug\ChnCharInfo.dll
+F:\yc\projects\C#\Stock\StockTool\Tool.App\bin\Debug\ChnCharInfo.xml
+F:\yc\projects\C#\Stock\StockTool\Tool.App\bin\Debug\zh-CN\ChnCharInfo.resources.dll
+F:\yc\projects\C#\Stock\StockTool\Tool.App\bin\Debug\Tool.Model.dll
+F:\yc\projects\C#\Stock\StockTool\Tool.App\bin\Debug\Tool.Model.pdb

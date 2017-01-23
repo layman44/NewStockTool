@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Tool.Common;
+using Tool.Model;
 
 namespace Tool.App.StockBase
 {
@@ -30,6 +31,8 @@ namespace Tool.App.StockBase
                 this.btnStart.Text = "开始获取深成A股";
             }
             this.currentType = stype;
+
+            this.btnImport.Enabled = false;
         }
 
         private void btnStart_Click(object sender, EventArgs e)
@@ -41,6 +44,43 @@ namespace Tool.App.StockBase
                 return;
             }
             dgvStock.DataSource = result;
+            if (result.Rows.Count > 0)
+            {
+                this.btnImport.Enabled = true;
+            }
+        }
+
+        private void btnImport_Click(object sender, EventArgs e)
+        {
+            int itype = 0;
+            using (Tool.Model.StockEntities context = new Model.StockEntities())
+            {
+                List<Base_Stock> baseinfos = null;
+                if (currentType == Enums.StockType.SH)
+                {
+                    baseinfos = GetStock.GetSHStock.Convert(dgvStock.DataSource as DataTable);
+                }
+                else
+                {
+
+                }
+                if (baseinfos == null || baseinfos.Count == 0)
+                {
+                    MessageBox.Show("数据获取异常");
+                    return;
+                }
+                Base_Stock old = null;
+                foreach (var item in baseinfos)
+                {
+                    old = (from s in context.Base_Stock where s.Code == item.Code select s).FirstOrDefault();
+                    if (old != null)
+                    {
+                        continue;
+                    }
+                    context.Base_Stock.Add(item);
+                }
+                context.SaveChanges();
+            }
         }
     }
 }

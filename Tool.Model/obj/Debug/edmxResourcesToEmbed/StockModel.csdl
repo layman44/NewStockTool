@@ -8,9 +8,9 @@
     <Key>
       <PropertyRef Name="Code" />
     </Key>
-    <Property Name="Code" Type="String" Nullable="false" annotation:StoreGeneratedPattern="None" MaxLength="6" FixedLength="true" />
-    <Property Name="Name" Type="String" Nullable="false" />
-    <Property Name="DateOfIPO" Type="DateTime" Nullable="false" />
+    <Property Name="Code" Type="String" Nullable="false" annotation:StoreGeneratedPattern="None" MaxLength="6" FixedLength="true" Unicode="true" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="DateOfIPO" Type="DateTime" Nullable="false" Precision="0" />
     <Property Name="FK_IndustryId" Type="Int32">
       <Documentation>
         <Summary>所属行业外键</Summary>
@@ -23,31 +23,32 @@
         <LongDescription>所在地区外键</LongDescription>
       </Documentation>
     </Property>
+    <Property Name="StockType" Type="Int32" />
   </EntityType>
   <EntityType Name="Detail_Stock">
     <Key>
       <PropertyRef Name="Code" />
     </Key>
-    <Property Name="Code" Type="String" Nullable="false" annotation:StoreGeneratedPattern="None" FixedLength="true" MaxLength="6" />
-    <Property Name="ZSZ" Type="Decimal" Nullable="false">
+    <Property Name="Code" Type="String" Nullable="false" annotation:StoreGeneratedPattern="None" FixedLength="true" MaxLength="6" Unicode="true" />
+    <Property Name="ZSZ" Type="Decimal" Nullable="false" Precision="18" Scale="0">
       <Documentation>
         <Summary>总市值</Summary>
         <LongDescription>总市值</LongDescription>
       </Documentation>
     </Property>
-    <Property Name="LTSZ" Type="Decimal" Nullable="false">
+    <Property Name="LTSZ" Type="Decimal" Nullable="false" Precision="18" Scale="0">
       <Documentation>
         <Summary>流通市值</Summary>
         <LongDescription>流通市值</LongDescription>
       </Documentation>
     </Property>
-    <Property Name="ZGB" Type="Decimal" Nullable="false">
+    <Property Name="ZGB" Type="Decimal" Nullable="false" Precision="18" Scale="0">
       <Documentation>
         <Summary>总股本</Summary>
         <LongDescription>总股本</LongDescription>
       </Documentation>
     </Property>
-    <Property Name="LTGB" Type="Decimal" Nullable="false">
+    <Property Name="LTGB" Type="Decimal" Nullable="false" Precision="18" Scale="0">
       <Documentation>
         <Summary>流通股本</Summary>
         <LongDescription>流通股本</LongDescription>

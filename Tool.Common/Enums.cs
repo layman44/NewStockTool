@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace Tool.Common
 {
-    public  class Enums
+    public class Enums
     {
         public enum StockType
         {
-            SH,
-            SZ
+            SH = 1,
+            SZ = 2
         }
     }
 }

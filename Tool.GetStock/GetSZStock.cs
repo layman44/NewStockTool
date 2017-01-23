@@ -8,5 +8,6 @@ namespace Tool.GetStock
 {
     public class GetSZStock
     {
+
     }
 }

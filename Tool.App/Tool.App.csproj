@@ -125,6 +125,10 @@
       <Project>{83863f67-ec45-4dd7-867a-486aaa0af921}</Project>
       <Name>Tool.GetStock</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Tool.Model\Tool.Model.csproj">
+      <Project>{74b78e7b-4c03-4be2-83e8-2fbdce71d7ca}</Project>
+      <Name>Tool.Model</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

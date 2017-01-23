@@ -30,6 +30,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="ChnCharInfo">
+      <HintPath>C:\Program Files (x86)\Microsoft Visual Studio International Pack\Simplified Chinese Pin-Yin Conversion Library\ChnCharInfo.dll</HintPath>
+    </Reference>
     <Reference Include="NPOI">
       <HintPath>G:\chrome下载\NPOI 2.2.1 binary package\Release\Net40\NPOI.dll</HintPath>
     </Reference>
@@ -53,6 +56,7 @@
     <Compile Include="DataTableExtend.cs" />
     <Compile Include="Enums.cs" />
     <Compile Include="ExcelHepler.cs" />
+    <Compile Include="PinyinHepler.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Urls.cs" />
   </ItemGroup>

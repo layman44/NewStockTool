@@ -4,8 +4,8 @@ using System.Data;
 using System.IO;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using Tool.Common;
+using Tool.Model;
 
 namespace Tool.GetStock
 {
@@ -60,6 +60,25 @@ namespace Tool.GetStock
                 return null;
             }
             return Common.DataTableExtend.ToDataTable(result);
+        }
+        public static List<Base_Stock> Convert(DataTable dt)
+        {
+            if (dt == null || dt.Rows.Count == 0) return null;
+
+            List<Base_Stock> baseinfos = new List<Base_Stock>();
+            Base_Stock item = null;
+            foreach (DataRow dr in dt.Rows)
+            {
+                item = new Base_Stock();
+                item.Code = dr["Code"].ToString();
+                item.Name = dr["Name"].ToString();
+                item.DateOfIPO = DateTime.Parse(dr["DateOfIPO"].ToString());
+                item.FK_AreaId = 0;
+                item.FK_IndustryId = 0;
+                item.StockType = (int)Enums.StockType.SH;
+                baseinfos.Add(item);
+            }
+            return baseinfos;
         }
     }
     public class DataItem
