@@ -52,35 +52,50 @@ namespace Tool.App.StockBase
 
         private void btnImport_Click(object sender, EventArgs e)
         {
-            int itype = 0;
-            using (Tool.Model.StockEntities context = new Model.StockEntities())
+            try
             {
-                List<Base_Stock> baseinfos = null;
-                if (currentType == Enums.StockType.SH)
+                using (Tool.Model.StockEntities context = new Model.StockEntities())
                 {
-                    baseinfos = GetStock.GetSHStock.Convert(dgvStock.DataSource as DataTable);
-                }
-                else
-                {
-
-                }
-                if (baseinfos == null || baseinfos.Count == 0)
-                {
-                    MessageBox.Show("数据获取异常");
-                    return;
-                }
-                Base_Stock old = null;
-                foreach (var item in baseinfos)
-                {
-                    old = (from s in context.Base_Stock where s.Code == item.Code select s).FirstOrDefault();
-                    if (old != null)
+                    List<Base_Stock> baseinfos = null;
+                    if (currentType == Enums.StockType.SH)
                     {
-                        continue;
+                        baseinfos = GetStock.GetSHStock.Convert(dgvStock.DataSource as DataTable);
                     }
-                    context.Base_Stock.Add(item);
+                    else
+                    {
+                        baseinfos = GetStock.GetSZStock.Convert(dgvStock.DataSource as DataTable);
+                    }
+                    if (baseinfos == null || baseinfos.Count == 0)
+                    {
+                        MessageBox.Show("数据获取异常");
+                        return;
+                    }
+                    Base_Stock oldBase = null;
+                    QuickSearch quick = null;
+                    foreach (var item in baseinfos)
+                    {
+                        oldBase = (from s in context.Base_Stock where s.Code == item.Code select s).FirstOrDefault();
+                        if (oldBase != null)
+                        {
+                            continue;
+                        }
+                        context.Base_Stock.Add(item);
+
+                        quick = new QuickSearch();
+                        quick.Code = item.Code;
+                        quick.Name = item.Name;
+                        quick.Name_JP = PinyinHepler.GetFirstPinyin(quick.Name);
+                        context.QuickSearches.Add(quick);
+                    }
+                    context.SaveChanges();
                 }
-                context.SaveChanges();
+                MessageBox.Show("导入成功！");
             }
+            catch(Exception ex)
+            {
+                throw ex;
+            }
+
         }
     }
 }

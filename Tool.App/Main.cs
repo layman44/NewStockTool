@@ -12,8 +12,6 @@ namespace Tool.App
 {
     public partial class Main : Form
     {
-        private int childFormNumber = 0;
-
         public Main()
         {
             InitializeComponent();

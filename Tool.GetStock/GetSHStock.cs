@@ -11,7 +11,7 @@ namespace Tool.GetStock
 {
     public class GetSHStock
     {
-        private static List<DataItem> ReadData(string filePath, bool ingoreFirstRow)
+        private static List<StockDataItem> ReadData(string filePath, bool ingoreFirstRow)
         {
             string[] datas = File.ReadAllLines(filePath, Encoding.Default);
             if (datas == null || datas.Length == 0)
@@ -22,7 +22,7 @@ namespace Tool.GetStock
             {
                 datas = datas.Skip(1).ToArray();
             }
-            List<DataItem> result = new List<DataItem>();
+            List<StockDataItem> result = new List<StockDataItem>();
             string[] spliteDatas = null;
             string tempItem = "";
             foreach (string item in datas)
@@ -34,13 +34,13 @@ namespace Tool.GetStock
             }
             return result;
         }
-        private static DataItem Parse(string[] datas)
+        private static StockDataItem Parse(string[] datas)
         {
             if (datas == null || datas.Length != 7)
             {
                 throw new Exception("格式错误");
             }
-            DataItem item = new DataItem();
+            StockDataItem item = new StockDataItem();
             item.Code = datas[0];
             item.Name = datas[1];
             DateTime dt;
@@ -54,7 +54,7 @@ namespace Tool.GetStock
         }
         public DataTable GetStock(string filePath, bool ingoreFirstRow)
         {
-            List<DataItem> result = ReadData(filePath, ingoreFirstRow);
+            List<StockDataItem> result = ReadData(filePath, ingoreFirstRow);
             if (result == null || result.Count == 0)
             {
                 return null;
@@ -81,92 +81,5 @@ namespace Tool.GetStock
             return baseinfos;
         }
     }
-    public class DataItem
-    {
-        /// <summary>
-        /// 股票代码
-        /// </summary>
-        private string code;
-        /// <summary>
-        /// 股票简称
-        /// </summary>
-        private string name;
-        /// <summary>
-        /// 上市日期
-        /// </summary>
-        private DateTime dateOfIPO;
-        /// <summary>
-        /// 总股本(万股)
-        /// </summary>
-        private decimal zGB;
-        /// <summary>
-        /// 流通股本(万股)
-        /// </summary>
-        private decimal lTGB;
 
-        public string Code
-        {
-            get
-            {
-                return code;
-            }
-
-            set
-            {
-                code = value;
-            }
-        }
-
-        public string Name
-        {
-            get
-            {
-                return name;
-            }
-
-            set
-            {
-                name = value;
-            }
-        }
-
-        public DateTime DateOfIPO
-        {
-            get
-            {
-                return dateOfIPO;
-            }
-
-            set
-            {
-                dateOfIPO = value;
-            }
-        }
-
-        public decimal ZGB
-        {
-            get
-            {
-                return zGB;
-            }
-
-            set
-            {
-                zGB = value;
-            }
-        }
-
-        public decimal LTGB
-        {
-            get
-            {
-                return lTGB;
-            }
-
-            set
-            {
-                lTGB = value;
-            }
-        }
-    }
 }

@@ -21,8 +21,17 @@
     <Property Name="ZGB" Type="decimal" Precision="18" Scale="0" Nullable="false" />
     <Property Name="LTGB" Type="decimal" Precision="18" Scale="0" Nullable="false" />
   </EntityType>
+  <EntityType Name="QuickSearch">
+    <Key>
+      <PropertyRef Name="Code" />
+    </Key>
+    <Property Name="Code" Type="nchar" MaxLength="6" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="Name_JP" Type="nvarchar" MaxLength="10" Nullable="false" />
+  </EntityType>
   <EntityContainer Name="StockModelStoreContainer">
     <EntitySet Name="Base_Stock" EntityType="Self.Base_Stock" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Detail_Stock" EntityType="Self.Detail_Stock" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="QuickSearch" EntityType="Self.QuickSearch" Schema="dbo" store:Type="Tables" />
   </EntityContainer>
 </Schema>

@@ -3,6 +3,7 @@
   <EntityContainer Name="StockEntities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="Base_Stock" EntityType="StockModel.Base_Stock" />
     <EntitySet Name="Detail_Stock" EntityType="StockModel.Detail_Stock" />
+    <EntitySet Name="QuickSearches" EntityType="StockModel.QuickSearch" />
   </EntityContainer>
   <EntityType Name="Base_Stock">
     <Key>
@@ -52,6 +53,19 @@
       <Documentation>
         <Summary>流通股本</Summary>
         <LongDescription>流通股本</LongDescription>
+      </Documentation>
+    </Property>
+  </EntityType>
+  <EntityType Name="QuickSearch">
+    <Key>
+      <PropertyRef Name="Code" />
+    </Key>
+    <Property Name="Code" Type="String" Nullable="false" MaxLength="6" FixedLength="true" Unicode="true" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Name_JP" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true">
+      <Documentation>
+        <Summary>简拼</Summary>
+        <LongDescription>简拼</LongDescription>
       </Documentation>
     </Property>
   </EntityType>

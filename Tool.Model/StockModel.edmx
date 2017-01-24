@@ -26,9 +26,18 @@
           <Property Name="ZGB" Type="decimal" Precision="18" Scale="0" Nullable="false" />
           <Property Name="LTGB" Type="decimal" Precision="18" Scale="0" Nullable="false" />
         </EntityType>
+        <EntityType Name="QuickSearch">
+          <Key>
+            <PropertyRef Name="Code" />
+          </Key>
+          <Property Name="Code" Type="nchar" MaxLength="6" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Name_JP" Type="nvarchar" MaxLength="10" Nullable="false" />
+        </EntityType>
         <EntityContainer Name="StockModelStoreContainer">
           <EntitySet Name="Base_Stock" EntityType="Self.Base_Stock" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Detail_Stock" EntityType="Self.Detail_Stock" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="QuickSearch" EntityType="Self.QuickSearch" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
       </Schema></edmx:StorageModels>
     <!-- CSDL content -->
@@ -37,6 +46,7 @@
         <EntityContainer Name="StockEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Base_Stock" EntityType="StockModel.Base_Stock" />
           <EntitySet Name="Detail_Stock" EntityType="StockModel.Detail_Stock" />
+          <EntitySet Name="QuickSearches" EntityType="StockModel.QuickSearch" />
         </EntityContainer>
         <EntityType Name="Base_Stock">
           <Key>
@@ -89,6 +99,19 @@
             </Documentation>
           </Property>
         </EntityType>
+        <EntityType Name="QuickSearch">
+          <Key>
+            <PropertyRef Name="Code" />
+          </Key>
+          <Property Name="Code" Type="String" Nullable="false" MaxLength="6" FixedLength="true" Unicode="true" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Name_JP" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" >
+            <Documentation>
+              <Summary>简拼</Summary>
+              <LongDescription>简拼</LongDescription>
+            </Documentation>
+          </Property>
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -98,12 +121,12 @@
     <EntitySetMapping Name="Base_Stock">
       <EntityTypeMapping TypeName="IsTypeOf(StockModel.Base_Stock)">
         <MappingFragment StoreEntitySet="Base_Stock">
-          <ScalarProperty Name="StockType" ColumnName="StockType" />
-                <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
           <ScalarProperty Name="Name" ColumnName="Name" />
           <ScalarProperty Name="DateOfIPO" ColumnName="DateOfIPO" />
           <ScalarProperty Name="FK_IndustryId" ColumnName="FK_IndustryId" />
           <ScalarProperty Name="FK_AreaId" ColumnName="FK_AreaId" />
+          <ScalarProperty Name="StockType" ColumnName="StockType" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -118,6 +141,15 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+          <EntitySetMapping Name="QuickSearches">
+            <EntityTypeMapping TypeName="StockModel.QuickSearch">
+              <MappingFragment StoreEntitySet="QuickSearch">
+                <ScalarProperty Name="Name_JP" ColumnName="Name_JP" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping></edmx:Mappings>
   </edmx:Runtime>

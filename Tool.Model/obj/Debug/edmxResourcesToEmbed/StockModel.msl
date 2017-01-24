@@ -4,12 +4,12 @@
     <EntitySetMapping Name="Base_Stock">
       <EntityTypeMapping TypeName="IsTypeOf(StockModel.Base_Stock)">
         <MappingFragment StoreEntitySet="Base_Stock">
-          <ScalarProperty Name="StockType" ColumnName="StockType" />
           <ScalarProperty Name="Code" ColumnName="Code" />
           <ScalarProperty Name="Name" ColumnName="Name" />
           <ScalarProperty Name="DateOfIPO" ColumnName="DateOfIPO" />
           <ScalarProperty Name="FK_IndustryId" ColumnName="FK_IndustryId" />
           <ScalarProperty Name="FK_AreaId" ColumnName="FK_AreaId" />
+          <ScalarProperty Name="StockType" ColumnName="StockType" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -21,6 +21,15 @@
           <ScalarProperty Name="LTSZ" ColumnName="LTSZ" />
           <ScalarProperty Name="ZGB" ColumnName="ZGB" />
           <ScalarProperty Name="LTGB" ColumnName="LTGB" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="QuickSearches">
+      <EntityTypeMapping TypeName="StockModel.QuickSearch">
+        <MappingFragment StoreEntitySet="QuickSearch">
+          <ScalarProperty Name="Name_JP" ColumnName="Name_JP" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

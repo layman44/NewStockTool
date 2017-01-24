@@ -27,5 +27,6 @@ namespace Tool.Model
     
         public virtual DbSet<Base_Stock> Base_Stock { get; set; }
         public virtual DbSet<Detail_Stock> Detail_Stock { get; set; }
+        public virtual DbSet<QuickSearch> QuickSearches { get; set; }
     }
 }

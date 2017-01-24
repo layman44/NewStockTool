@@ -2,7 +2,7 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, 2012 and Azure
 -- --------------------------------------------------
--- Date Created: 01/19/2017 23:23:18
+-- Date Created: 01/24/2017 19:25:50
 -- Generated from EDMX file: F:\yc\projects\C#\Stock\StockTool\Tool.Model\StockModel.edmx
 -- --------------------------------------------------
 
@@ -39,7 +39,8 @@ CREATE TABLE [dbo].[Base_Stock] (
     [Name] nvarchar(50)  NOT NULL,
     [DateOfIPO] datetime  NOT NULL,
     [FK_IndustryId] int  NULL,
-    [FK_AreaId] int  NULL
+    [FK_AreaId] int  NULL,
+    [StockType] int  NULL
 );
 GO
 
@@ -50,6 +51,14 @@ CREATE TABLE [dbo].[Detail_Stock] (
     [LTSZ] decimal(18,0)  NOT NULL,
     [ZGB] decimal(18,0)  NOT NULL,
     [LTGB] decimal(18,0)  NOT NULL
+);
+GO
+
+-- Creating table 'QuickSearches'
+CREATE TABLE [dbo].[QuickSearches] (
+    [Code] nchar(6)  NOT NULL,
+    [Name] nvarchar(20)  NOT NULL,
+    [Name_JP] nvarchar(10)  NOT NULL
 );
 GO
 
@@ -66,6 +75,12 @@ GO
 -- Creating primary key on [Code] in table 'Detail_Stock'
 ALTER TABLE [dbo].[Detail_Stock]
 ADD CONSTRAINT [PK_Detail_Stock]
+    PRIMARY KEY CLUSTERED ([Code] ASC);
+GO
+
+-- Creating primary key on [Code] in table 'QuickSearches'
+ALTER TABLE [dbo].[QuickSearches]
+ADD CONSTRAINT [PK_QuickSearches]
     PRIMARY KEY CLUSTERED ([Code] ASC);
 GO
 
